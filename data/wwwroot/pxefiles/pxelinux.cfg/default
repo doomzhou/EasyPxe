@@ -1,0 +1,25 @@
+default vesamenu.c32
+timeout 300
+
+menu title Welcome to PXE server!
+menu background splash.jpg
+menu color border 0 #ffffffff #00010000
+menu color sel 7 #ffffffff #ff000002
+menu color title 0 #ffffffff #00000000
+menu color tabmsg 0 #ffffffff #00000000
+menu color unsel 0 #ffffffff #00000100
+menu color hotsel 0 #ff000000 #ffffffff
+menu color hotkey 7 #ffffffff #ff000000
+menu color scrollbar 0 #ffffffff #00000000
+
+LABEL      winpe
+MENU LABEL Boot Windows PE from network
+KERNEL     /memdisk
+INITRD     winpe.iso
+APPEND     iso raw
+menu default
+
+label local
+    menu label Boot from local driver
+    localboot 0xffff
+

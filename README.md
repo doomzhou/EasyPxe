@@ -24,3 +24,6 @@ pxe引导winpe[more]
 
 2. macpro下测试, dhcp响应包tcpdump的时候 会报 bad udp cksum 0x89c5 -> 0xf74c
 这样的话，就需要直接在macpor下安装dnsmasq 然后 `sudo dnsmasq -C dnsmasq.conf -d`
+
+3. 针对自己的windows机器，需要针对主板支持的不同硬盘模式来选择下载winpe镜像。
+UEFI等等
